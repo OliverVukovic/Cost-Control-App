@@ -22,7 +22,7 @@ function ExpenseItem(props) {
 
             <div className='expense-item__price'>€ {props.amount}</div>
 
-            <button onClick={editItem}>Edit</button>
+            <button className="edit-btn" onClick={editItem}>Edit</button>
 
         </div>
     );
