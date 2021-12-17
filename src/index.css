@@ -14,8 +14,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: #3f3f3f;
-  display: flex;
   margin: auto;
-  justify-content: center;
 }
 

@@ -81,3 +81,57 @@
     background-color: wheat;
     font-weight: 700;
 }
+
+
+@media (max-width: 430px) {
+
+    .card {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .expense-item {
+        gap: 3px;
+        padding: 10px;
+    }
+
+    .expense-item__date {
+        width: 75px;
+    }
+
+    .month {
+        font-size: 12px;;
+    }
+    
+    .year {
+        font-size: 12px;
+    }
+    
+    .day {
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 700;
+    }
+
+    .expense-item__description {
+        justify-content: center;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: -0.5px;
+        line-height: 20px;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+
+    .expense-item__price {
+        width: 75px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        padding: 6px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
