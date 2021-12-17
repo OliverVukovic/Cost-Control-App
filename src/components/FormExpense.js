@@ -95,7 +95,7 @@ function FormExpense(props) {
 
                 <div className="new-expense__actions">
                     <button type="submit">
-                        Dodaj
+                        Add New
                     </button>
                 </div>
             </form>

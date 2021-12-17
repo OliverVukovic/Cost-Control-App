@@ -1,28 +1,41 @@
 import React, { useState } from "react";
 import ExpensesFilter from "./ExpenseFilter";
 import ExpenseItem from "./ExpenseItem";
+import Nothn from "../assets/i-dont-know.png"
 
 
 function Expenses(props) {
 
-    const [filterYear, setFilterYear] = useState('2020');
+    const [filterYear, setFilterYear] = useState('2021');
 
     const filterChangeHandler = selectedYear => {
         setFilterYear(selectedYear);
     };
+
+    const filterExpenses = props.items.filter(expense => {
+        return expense.date.getFullYear().toString() === filterYear;
+    });
       
       return (
         <div className="card">
             <div className="expenses">
-                <ExpensesFilter selected={filterYear} onChangeFilter={filterChangeHandler} />
-                
-                {props.items.map((expense) => (
-                    <ExpenseItem 
-                        title={expense.title} 
-                        amount={expense.amount}
-                        date={expense.date} 
-                    />
-                ))}
+                <ExpensesFilter 
+                    selected={filterYear} 
+                    onChangeFilter={filterChangeHandler} 
+                />
+                {filterExpenses.length === 0 ? (
+                    <img className="nothn" src={Nothn} alt="No-Expenses" />
+                ) : (
+                    filterExpenses.map((expense) => (
+                        <ExpenseItem 
+                            key={expense.id}
+                            title={expense.title} 
+                            amount={expense.amount}
+                            date={expense.date} 
+                        />
+                    ))
+                )}
+                {}
                 
                 {/* <ExpenseItem 
                     title={props.items[0].title} 

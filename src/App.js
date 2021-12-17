@@ -22,30 +22,30 @@ const RANDOM_DATA = [
     amount: 33.50,
     date: new Date(2021, 9, 10),
   },
-  {
-    id: 4,
-    title: 'Merkur osiguranje',
-    amount: 503.44,
-    date: new Date(2021, 5, 6),
-  },
-  {
-    id: 5,
-    title: 'KASKO',
-    amount: 304.56,
-    date: new Date(2021, 1, 1),
-  },
-  {
-    id: 6,
-    title: 'Garaza',
-    amount: 100.00,
-    date: new Date(2021, 11, 1),
-  },
-  {
-    id: 7,
-    title: 'Gorivo',
-    amount: 30.00,
-    date: new Date(2021, 11, 31),
-  }, 
+  // {
+  //   id: 4,
+  //   title: 'Merkur osiguranje',
+  //   amount: 503.44,
+  //   date: new Date(2021, 5, 6),
+  // },
+  // {
+  //   id: 5,
+  //   title: 'KASKO',
+  //   amount: 304.56,
+  //   date: new Date(2021, 1, 1),
+  // },
+  // {
+  //   id: 6,
+  //   title: 'Garaza',
+  //   amount: 100.00,
+  //   date: new Date(2021, 11, 1),
+  // },
+  // {
+  //   id: 7,
+  //   title: 'Gorivo',
+  //   amount: 30.00,
+  //   date: new Date(2021, 11, 31),
+  // }, 
 ];
 
 

@@ -86,15 +86,20 @@
     display: flex;
     flex-direction: column;
     color: white;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-content: center;
-    align-items: flex-end;
+    align-items: stretch;
     width: 100%;
+    padding: 15px 10px;
+    background-color: black;
+    border-radius: 10px;
 }
 
 .expenses-filter__control {
     display: flex;
     justify-content: space-between;
+    align-content: center;
+    align-items: center;
     gap: 8px;
     font-size: 14px;
     font-weight: 700;
@@ -102,7 +107,16 @@
 
 select {
     font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
+
+.nothn {
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
 
 @media (max-width: 430px) {
 
