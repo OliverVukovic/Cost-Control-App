@@ -15,6 +15,19 @@ function Expenses(props) {
     const filterExpenses = props.items.filter(expense => {
         return expense.date.getFullYear().toString() === filterYear;
     });
+
+    let expensesContentPhoto = <img className="nothn" src={Nothn} alt="No-Expenses" />
+
+    if (filterExpenses.length > 0) {
+        expensesContentPhoto = filterExpenses.map((expense) => (
+            <ExpenseItem 
+                key={expense.id}
+                title={expense.title} 
+                amount={expense.amount}
+                date={expense.date} 
+            />
+        ));
+    }
       
       return (
         <div className="card">
@@ -23,6 +36,15 @@ function Expenses(props) {
                     selected={filterYear} 
                     onChangeFilter={filterChangeHandler} 
                 />
+
+                {expensesContentPhoto}
+                
+                
+                
+                
+                
+                {/* 
+                
                 {filterExpenses.length === 0 ? (
                     <img className="nothn" src={Nothn} alt="No-Expenses" />
                 ) : (
@@ -34,10 +56,25 @@ function Expenses(props) {
                             date={expense.date} 
                         />
                     ))
-                )}
-                {}
+                )}            -------- >   defaultni nacin funkcije  
                 
-                {/* <ExpenseItem 
+                
+                 {filterExpenses.length === 0 && <img className="nothn" src={Nothn} alt="No-Expenses" />}
+                {filterExpenses.length > 0 &&
+                    filterExpenses.map((expense) => (
+                        <ExpenseItem 
+                            key={expense.id}
+                            title={expense.title} 
+                            amount={expense.amount}
+                            date={expense.date} 
+                        />
+                    ))}               -------- >   uprosceni nacin sa koriscenjem "i-ili" iz kojega se prebacujemo na funkciju iznad, koristeci let expensesContentPhoto (ili bilo koji proizvoljni naziv)
+                                
+                */}
+                
+
+                {/* 
+                <ExpenseItem 
                     title={props.items[0].title} 
                     amount={props.items[0].amount}
                     date={props.items[0].date} 
@@ -72,6 +109,7 @@ function Expenses(props) {
                     amount={props.items[6].amount}
                     date={props.items[6].date}
                 /> */}
+                
             </div>
           </div>
       )
